@@ -1,0 +1,179 @@
+@ StandardLibrary
+<
+    |*| string_utils
+    <
+        |*| to_upper
+        <
+            |*| input : string
+            @ Return
+            <
+                |*| result : string => upper(input)
+            >
+        >
+        |*| to_lower
+        <
+            |*| input : string
+            @ Return
+            <
+                |*| result : string => lower(input)
+            >
+        >
+        |*| capitalize
+        <
+            |*| input : string
+            @ Return
+            <
+                |*| result : string => capitalize(input)
+            >
+        >
+        |*| is_alpha
+        <
+            |*| input : string
+            @ Return
+            <
+                |*| result : bool => is_alpha(input)
+            >
+        >
+        |*| is_numeric
+        <
+            |*| input : string
+            @ Return
+            <
+                |*| result : bool => is_numeric(input)
+            >
+        >
+        |*| substring
+        <
+            |*| input : string
+            |*| start : int
+            |*| length : int
+            @ Return
+            <
+                |*| result : string => substring(input, start, length)
+            >
+        >
+        |*| replace
+        <
+            |*| input : string
+            |*| old_str : string
+            |*| new_str : string
+            @ Return
+            <
+                |*| result : string => replace(input, old_str, new_str)
+            >
+        >
+    >
+    |*| math_utils
+    <
+        |*| add
+        <
+            |*| a : int
+            |*| b : int
+            @ Return
+            <
+                |*| result : int => a + b
+            >
+        >
+        |*| subtract
+        <
+            |*| a : int
+            |*| b : int
+            @ Return
+            <
+                |*| result : int => a - b
+            >
+        >
+        |*| multiply
+        <
+            |*| a : int
+            |*| b : int
+            @ Return
+            <
+                |*| result : int => a * b
+            >
+        >
+        |*| divide
+        <
+            |*| a : int
+            |*| b : int
+            @ Return
+            <
+                |*| result : float => float(a) / float(b)
+            >
+        >
+        |*| power
+        <
+            |*| base : int
+            |*| exponent : int
+            @ Return
+            <
+                |*| result : int => pow(base, exponent)
+            >
+        >
+        |*| sqrt
+        <
+            |*| num : int
+            @ Return
+            <
+                |*| result : float => sqrt(num)
+            >
+        >
+    >
+    |*| data_structures
+    <
+        |*| list
+        <
+            |*| elements : [any]
+            @ Add
+            <
+                |*| element : any
+                |*| elements => append(elements, element)
+            >
+        >
+        |*| set
+        <
+            |*| elements : {any}
+            @ Add
+            <
+                |*| element : any
+                |*| elements => insert(elements, element)
+            >
+        >
+        |*| map
+        <
+            |*| key_value_pairs : {any: any}
+            @ Add
+            <
+                |*| key : any
+                |*| value : any
+                |*| key_value_pairs => set_item(key_value_pairs, key, value)
+            >
+        >
+        |*| stack
+        <
+            |*| elements : [any]
+            @ Push
+            <
+                |*| element : any
+                |*| elements => push(elements, element)
+            >
+            @ Pop
+            <
+                |*| elements => pop(elements)
+            >
+        >
+        |*| queue
+        <
+            |*| elements : [any]
+            @ Enqueue
+            <
+                |*| element : any
+                |*| elements => enqueue(elements, element)
+            >
+            @ Dequeue
+            <
+                |*| elements => dequeue(elements)
+            >
+        >
+    >
+>
