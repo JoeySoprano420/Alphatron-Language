@@ -1,0 +1,18 @@
+@ VariableTypes
+<
+    |*| date
+    |*| time
+    |*| datetime
+    |*| currency
+    |*| complex_number
+    |*| fraction
+    |*| matrix
+    |*| tensor
+    |*| image
+    |*| audio
+    |*| video
+    |*| file
+    |*| directory
+    |*| url
+    |*| email
+>
