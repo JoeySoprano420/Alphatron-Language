@@ -1,0 +1,76 @@
+Here's a detailed installation guide for Alphatron:
+
+---
+
+## Installation Guide for Alphatron
+
+### Prerequisites
+
+Before installing Alphatron, ensure you have the following prerequisites installed on your system:
+
+- **C++ Compiler**: Alphatron uses LLVM for compilation, so ensure you have a C++ compiler that supports C++11 or later.
+- **CMake**: Version 3.10 or higher is recommended.
+- **Git**: Version control system for cloning the Alphatron repository.
+
+### Step 1: Clone the Repository
+
+Open your terminal and clone the Alphatron repository from GitHub:
+
+```bash
+git clone https://github.com/alphatron-lang/alphatron.git
+cd alphatron
+```
+
+### Step 2: Build from Source
+
+1. Create a build directory and navigate into it:
+
+   ```bash
+   mkdir build
+   cd build
+   ```
+
+2. Run CMake to configure the build environment:
+
+   ```bash
+   cmake ..
+   ```
+
+   This command prepares the build system based on your system configuration and installed dependencies.
+
+3. Build Alphatron using `make`:
+
+   ```bash
+   make
+   ```
+
+   This command compiles the Alphatron source code into executable binaries.
+
+### Step 3: Run Examples
+
+After successfully building Alphatron, you can run the included examples to verify the installation:
+
+```bash
+./alphatron ../examples/hello.alph
+```
+
+Replace `../examples/hello.alph` with the path to any Alphatron source file you want to execute.
+
+### Step 4: Explore Documentation
+
+Open `docs/index.html` in your web browser to access the Alphatron documentation. The documentation provides detailed guides, tutorials, and API references to help you get started with Alphatron programming.
+
+### Step 5: Testing the Installation
+
+To ensure everything is set up correctly, you can run a simple test script or execute the examples provided in the `examples/` directory. If Alphatron executes without errors and produces the expected output, then the installation was successful.
+
+---
+
+## Additional Notes
+
+- **Contributing**: Contributions to Alphatron are welcome! Check out our [contribution guidelines](CONTRIBUTING.md) to get started.
+- **Support**: For support, feedback, or questions, please contact us at support@alphatron-lang.com or open an issue in the [Alphatron GitHub repository](https://github.com/alphatron-lang/alphatron).
+
+---
+
+This installation guide provides a step-by-step process to install Alphatron from source on your system. Adjust paths and commands as necessary based on your environment and preferences.
