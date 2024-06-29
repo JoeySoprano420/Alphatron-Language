@@ -1,6 +1,6 @@
 # Alphatron-Language
 Code-Scripting-Language for Programmers
-Certainly! Here's a comprehensive About section and README for Alphatron:
+Here's a comprehensive About section and README for Alphatron:
 
 ---
 
