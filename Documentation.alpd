@@ -1,0 +1,28 @@
+Based on the page you're viewing, here's an updated version of the Alphatron documentation:
+
+**Alphatron Documentation**
+Welcome to the comprehensive documentation for Alphatron, a state-of-the-art code-scripting language tailored for programmers seeking efficiency and intelligent automation.
+
+**Table of Contents**
+- **Introduction**
+  Alphatron is a sophisticated programming language that blends imperative-procedural, functional, and object-oriented paradigms. It utilizes LLVM for optimal compilation and boasts AI-driven features for self-learning and enhancement.
+
+- **Installation & Getting Started**
+  Follow the Installation Guide to set up Alphatron, and jump into programming with the Getting Started section.
+
+- **Language Syntax & Standard Library**
+  Delve into Alphatron's unique syntax and explore its extensive Standard Library, offering a wide range of functionalities from string manipulation to complex data structures.
+
+- **Variable & Class Types**
+  Discover the diverse Variable Types Alphatron supports and learn how to define custom Class Types to represent complex entities.
+
+- **Compiler, Execution & Smart Features**
+  Understand Alphatron's compilation process with LLVM and explore its smart learning capabilities and auto-improvement features for a seamless coding experience.
+
+- **Examples, Contributing & Support**
+  Gain practical insights with coding examples, contribute to Alphatron's growth, and find support for any queries or feedback.
+
+- **License**
+  Alphatron is open-sourced under the MIT License, promoting free and collaborative development.
+
+This updated documentation serves as a detailed guide to Alphatron, covering everything from setup to advanced programming concepts. Utilize the table of contents to efficiently navigate the documentation and fully leverage Alphatron's capabilities in your programming endeavors.
