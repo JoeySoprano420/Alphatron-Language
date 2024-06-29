@@ -1,0 +1,94 @@
+@ ClassTypes
+<
+    |*| person
+    <
+        |*| name : string
+        |*| age : int
+        |*| address : string
+        @ Methods
+        <
+            |*| get_name
+            <
+                @ Return
+                <
+                    |*| result : string => name
+                >
+            >
+            |*| get_age
+            <
+                @ Return
+                <
+                    |*| result : int => age
+                >
+            >
+            |*| set_address
+            <
+                |*| new_address : string
+                @ Process
+                <
+                    |*| address => new_address
+                >
+            >
+        >
+    >
+    |*| car
+    <
+        |*| make : string
+        |*| model : string
+        |*| year : int
+        @ Methods
+        <
+            |*| get_make
+            <
+                @ Return
+                <
+                    |*| result : string => make
+                >
+            >
+            |*| get_model
+            <
+                @ Return
+                <
+                    |*| result : string => model
+                >
+            >
+            |*| get_year
+            <
+                @ Return
+                <
+                    |*| result : int => year
+                >
+            >
+        >
+    >
+    |*| book
+    <
+        |*| title : string
+        |*| author : string
+        |*| pages : int
+        @ Methods
+        <
+            |*| get_title
+            <
+                @ Return
+                <
+                    |*| result : string => title
+                >
+            >
+            |*| get_author
+            <
+                @ Return
+                <
+                    |*| result : string => author
+                >
+            >
+            |*| get_pages
+            <
+                @ Return
+                <
+                    |*| result : int => pages
+                >
+            >
+        >
+    >
+>
