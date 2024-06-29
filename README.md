@@ -70,7 +70,7 @@ Explore the [Alphatron Documentation](docs/index.html) for detailed guides, tuto
 
 ## Support
 
-For support, feedback, or questions, please contact us at support@alphatron-lang.com or open an issue in this repository.
+For support, feedback, or questions, please contact reach out through our issues section.
 
 ---
 
