@@ -1,0 +1,38 @@
+@ FunctionDefinition
+<
+    |*| addNumbers
+    <
+        |*| a : int
+        |*| b : int
+        @ Process
+        <
+            |*| result : int => a + b
+        >
+        @ Return
+        <
+            |*| result
+        >
+    >
+>
+
+@ MatchValue
+<
+    |*| x : int => 42
+    @ Match
+    <
+        |*| x == 42
+        @ Action
+        <
+            |*| result => "The answer to everything"
+        >
+        |*| x == 0
+        @ Action
+        <
+            |*| result => "Nothing"
+        >
+        @ Else
+        <
+            |*| result => "Unknown"
+        >
+    >
+>
