@@ -5,6 +5,9 @@
         |*| name : string
         |*| age : int
         |*| address : string
+        |*| email : string
+        |*| phone : string
+        |*| friends : [person]
         @ Methods
         <
             |*| get_name
@@ -29,13 +32,55 @@
                     |*| address => new_address
                 >
             >
+            |*| add_friend
+            <
+                |*| friend : person
+                @ Process
+                <
+                    |*| friends => append(friends, friend)
+                >
+            >
+            |*| get_friends
+            <
+                @ Return
+                <
+                    |*| result : [person] => friends
+                >
+            >
+            |*| send_email
+            <
+                |*| message : string
+                @ Process
+                <
+                    |*| result : string => "Email sent to " + email + " with message: " + message
+                >
+            >
+            |*| call_phone
+            <
+                @ Process
+                <
+                    |*| result : string => "Calling " + phone
+                >
+            >
+            |*| is_adult
+            <
+                @ Return
+                <
+                    |*| result : bool => age >= 18
+                >
+            >
         >
     >
+    
     |*| car
     <
         |*| make : string
         |*| model : string
         |*| year : int
+        |*| owner : person
+        |*| mileage : float
+        |*| fuel_level : float
+        |*| fuel_capacity : float
         @ Methods
         <
             |*| get_make
@@ -59,13 +104,47 @@
                     |*| result : int => year
                 >
             >
+            |*| get_owner
+            <
+                @ Return
+                <
+                    |*| result : string => owner.get_name()
+                >
+            >
+            |*| drive
+            <
+                |*| distance : float
+                @ Process
+                <
+                    |*| mileage => mileage + distance
+                    |*| fuel_level => fuel_level - (distance / 25.0)  # Assuming 25 miles per gallon
+                >
+            >
+            |*| refuel
+            <
+                |*| amount : float
+                @ Process
+                <
+                    |*| fuel_level => min(fuel_capacity, fuel_level + amount)
+                >
+            >
+            |*| is_fuel_low
+            <
+                @ Return
+                <
+                    |*| result : bool => fuel_level < (0.1 * fuel_capacity)
+                >
+            >
         >
     >
+    
     |*| book
     <
         |*| title : string
         |*| author : string
         |*| pages : int
+        |*| current_page : int
+        |*| is_checked_out : bool
         @ Methods
         <
             |*| get_title
@@ -87,6 +166,145 @@
                 @ Return
                 <
                     |*| result : int => pages
+                >
+            >
+            |*| read
+            <
+                |*| num_pages : int
+                @ Process
+                <
+                    |*| current_page => min(pages, current_page + num_pages)
+                >
+            >
+            |*| is_finished
+            <
+                @ Return
+                <
+                    |*| result : bool => current_page >= pages
+                >
+            >
+            |*| check_out
+            <
+                @ Process
+                <
+                    |*| is_checked_out => True
+                >
+            >
+            |*| return_book
+            <
+                @ Process
+                <
+                    |*| is_checked_out => False
+                >
+            >
+        >
+    >
+    
+    |*| library
+    <
+        |*| name : string
+        |*| address : string
+        |*| books : [book]
+        @ Methods
+        <
+            |*| get_name
+            <
+                @ Return
+                <
+                    |*| result : string => name
+                >
+            >
+            |*| get_address
+            <
+                @ Return
+                <
+                    |*| result : string => address
+                >
+            >
+            |*| add_book
+            <
+                |*| new_book : book
+                @ Process
+                <
+                    |*| books => append(books, new_book)
+                >
+            >
+            |*| find_book_by_title
+            <
+                |*| title : string
+                @ Return
+                <
+                    |*| result : book => filter(books, b => b.get_title() == title)[0]
+                >
+            >
+            |*| check_out_book
+            <
+                |*| title : string
+                @ Process
+                <
+                    |*| book => find_book_by_title(title)
+                    |*| book.check_out()
+                >
+            >
+            |*| return_book
+            <
+                |*| title : string
+                @ Process
+                <
+                    |*| book => find_book_by_title(title)
+                    |*| book.return_book()
+                >
+            >
+        >
+    >
+    
+    |*| employee
+    <
+        |*| name : string
+        |*| employee_id : int
+        |*| position : string
+        |*| salary : float
+        |*| hire_date : string
+        |*| department : string
+        @ Methods
+        <
+            |*| get_name
+            <
+                @ Return
+                <
+                    |*| result : string => name
+                >
+            >
+            |*| get_employee_id
+            <
+                @ Return
+                <
+                    |*| result : int => employee_id
+                >
+            >
+            |*| get_position
+            <
+                @ Return
+                <
+                    |*| result : string => position
+                >
+            >
+            |*| promote
+            <
+                |*| new_position : string
+                |*| raise_amount : float
+                @ Process
+                <
+                    |*| position => new_position
+                    |*| salary => salary + raise_amount
+                >
+            >
+            |*| annual_raise
+            <
+                |*| percentage : float
+                @ Process
+                <
+                    |*| salary => salary + (salary * percentage / 100.0)
                 >
             >
         >
