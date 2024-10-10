@@ -1,3 +1,5 @@
+Here’s a greatly expanded version of the Standard Library for Alphatron by Draco 420, incorporating more diverse utilities, mathematical functions, and data structure methods to provide greater flexibility and depth:
+
 @ StandardLibrary
 <
     |*| string_utils
@@ -62,7 +64,61 @@
                 |*| result : string => replace(input, old_str, new_str)
             >
         >
+        |*| trim
+        <
+            |*| input : string
+            @ Return
+            <
+                |*| result : string => trim(input)
+            >
+        >
+        |*| starts_with
+        <
+            |*| input : string
+            |*| prefix : string
+            @ Return
+            <
+                |*| result : bool => starts_with(input, prefix)
+            >
+        >
+        |*| ends_with
+        <
+            |*| input : string
+            |*| suffix : string
+            @ Return
+            <
+                |*| result : bool => ends_with(input, suffix)
+            >
+        >
+        |*| split
+        <
+            |*| input : string
+            |*| delimiter : string
+            @ Return
+            <
+                |*| result : [string] => split(input, delimiter)
+            >
+        >
+        |*| join
+        <
+            |*| elements : [string]
+            |*| delimiter : string
+            @ Return
+            <
+                |*| result : string => join(elements, delimiter)
+            >
+        >
+        |*| contains
+        <
+            |*| input : string
+            |*| substring : string
+            @ Return
+            <
+                |*| result : bool => contains(input, substring)
+            >
+        >
     >
+    
     |*| math_utils
     <
         |*| add
@@ -118,7 +174,74 @@
                 |*| result : float => sqrt(num)
             >
         >
+        |*| factorial
+        <
+            |*| num : int
+            @ Return
+            <
+                |*| result : int => factorial(num)
+            >
+        >
+        |*| log
+        <
+            |*| num : float
+            |*| base : float
+            @ Return
+            <
+                |*| result : float => log(num, base)
+            >
+        >
+        |*| sin
+        <
+            |*| angle : float
+            @ Return
+            <
+                |*| result : float => sin(angle)
+            >
+        >
+        |*| cos
+        <
+            |*| angle : float
+            @ Return
+            <
+                |*| result : float => cos(angle)
+            >
+        >
+        |*| tan
+        <
+            |*| angle : float
+            @ Return
+            <
+                |*| result : float => tan(angle)
+            >
+        >
+        |*| round
+        <
+            |*| num : float
+            |*| digits : int
+            @ Return
+            <
+                |*| result : float => round(num, digits)
+            >
+        >
+        |*| floor
+        <
+            |*| num : float
+            @ Return
+            <
+                |*| result : float => floor(num)
+            >
+        >
+        |*| ceil
+        <
+            |*| num : float
+            @ Return
+            <
+                |*| result : float => ceil(num)
+            >
+        >
     >
+    
     |*| data_structures
     <
         |*| list
@@ -129,6 +252,26 @@
                 |*| element : any
                 |*| elements => append(elements, element)
             >
+            @ Remove
+            <
+                |*| element : any
+                |*| elements => remove(elements, element)
+            >
+            @ Find
+            <
+                |*| element : any
+                @ Return
+                <
+                    |*| result : int => find(elements, element)
+                >
+            >
+            @ Reverse
+            <
+                @ Return
+                <
+                    |*| result : [any] => reverse(elements)
+                >
+            >
         >
         |*| set
         <
@@ -137,6 +280,35 @@
             <
                 |*| element : any
                 |*| elements => insert(elements, element)
+            >
+            @ Remove
+            <
+                |*| element : any
+                |*| elements => remove(elements, element)
+            >
+            @ Union
+            <
+                |*| other_set : {any}
+                @ Return
+                <
+                    |*| result : {any} => union(elements, other_set)
+                >
+            >
+            @ Intersection
+            <
+                |*| other_set : {any}
+                @ Return
+                <
+                    |*| result : {any} => intersection(elements, other_set)
+                >
+            >
+            @ Difference
+            <
+                |*| other_set : {any}
+                @ Return
+                <
+                    |*| result : {any} => difference(elements, other_set)
+                >
             >
         >
         |*| map
@@ -147,6 +319,25 @@
                 |*| key : any
                 |*| value : any
                 |*| key_value_pairs => set_item(key_value_pairs, key, value)
+            >
+            @ Remove
+            <
+                |*| key : any
+                |*| key_value_pairs => delete_item(key_value_pairs, key)
+            >
+            @ Keys
+            <
+                @ Return
+                <
+                    |*| result : [any] => keys(key_value_pairs)
+                >
+            >
+            @ Values
+            <
+                @ Return
+                <
+                    |*| result : [any] => values(key_value_pairs)
+                >
             >
         >
         |*| stack
@@ -161,6 +352,13 @@
             <
                 |*| elements => pop(elements)
             >
+            @ Peek
+            <
+                @ Return
+                <
+                    |*| result : any => peek(elements)
+                >
+            >
         >
         |*| queue
         <
@@ -174,6 +372,14 @@
             <
                 |*| elements => dequeue(elements)
             >
+            @ Peek
+            <
+                @ Return
+                <
+                    |*| result : any => peek(elements)
+                >
+            >
         >
     >
 >
+
